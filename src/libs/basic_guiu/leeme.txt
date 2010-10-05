@@ -1,0 +1,109 @@
+            ==========
+              Basic_Guiu
+            ==========
+
+Autor: Ricardo Daniel Quiroga -> L2Radamanthys
+====
+
+E-Mail: l2radamanthys@gmail.com, ricardoquiroga.dev@gmail.com, l2radamanthys@saltalug.org.ar
+=====
+
+Sitio Web: http://www.l2radamanthys.com.ar, http//:l2radamanthys.blogspot.com
+=======
+
+Fecha: 18 de Febrero de 2010
+=====
+
+Version Actual: 0.1.8b (Beta)
+===========
+
+Historial
+======
+----------------------------------------------------------------------------------------------
+Version 0.1.8b (Actual)
+    Solo se mejoro la funcion de carga de imagenes, para mejorar el manejo  y
+conversion de imagenes en formato '.png'.
+
+----------------------------------------------------------------------------------------------
+Version 0.1.8
+    Nueva clase de boton con soporte de imagen para los 3 estados, NADA, HOVER, SOBRE. aparte
+de esto no hay ninguna otra modificacion.
+
+----------------------------------------------------------------------------------------------
+Version 0.1.7
+    Extendiendo la libreria Implementacion de un nuevo Objecto ImagenList, el cual en realidad
+es un mapa de bits que se muestra por parate (o cuadros para ser mas explicito). Debuguee algunos
+errores de la version 0.1.6 que habian quedado al aire.
+
+----------------------------------------------------------------------------------------------
+
+Version 0.1.6
+    Algo de lo que carecian las versiones anteriores hera de una documentacion mas estendidad
+en esta version ademas de eso se realizaron algunos cambios en el modulo frame, otro cambios
+inportantes a resaltar es el cambio en el nombre en los tipos de algunos objectos solo para seguir un
+buen estilo de codigo se renombraron las siguientes clases:
+
+    Switch_btn ->  SwitchBtn
+    Editable_text -> EditableText
+    Static_Bitmap -> Bitmap
+    Progress_bar -> ProgressBar
+
+Ademas todos los objectos cuentan con una nueva funcion "centrar(x,y)" la cual centra el objecto en el
+punto (x,y). ademas de un nuevo metodo generico en el modulo frame para agregar elementos a la
+ventana.
+
+----------------------------------------------------------------------------------------------
+
+Version 0.1.4
+    Nuevo Elemento agregado, Progress_bar (o Barra de Progreso), su uso es muy
+secillo y no tiene demaciadas complicaciones, tambien se adapto el modulo frame para poder
+usar este nuevo elemento junto con el.
+
+----------------------------------------------------------------------------------------------
+
+Version 0.1.3
+    En esta ultima version se agrego el elemento Switch_btn que por defecto funciona
+como un switch boton, pero se lo puede usar como chek box sin problemas y como spin boton
+agregando algunas lineas de codigo extra.
+
+    Esta vercion es compatible con la anterior, a exepcion que se desee utilizar el nuevo
+elemento introducido en esta version. El modula frame ya fue modificado para poder trabajar con
+el nuevo componente.
+
+----------------------------------------------------------------------------------------------
+
+Version 0.1.2
+    Esta version no agrega ningun canbio importante a destacar con respecto a la vesion
+anterior (0.1.0) la misma es 100% compatible (los ejemplos son los mismos que en la version
+anterior y no se canbio ninguna linea de codigo :P), solo resuelve (parchado) el problema que
+tenian los editables de no poderse usar mas de un editable por ventana.
+
+    Posiblemente en versiones posteriores recien se implemente la posibilidad de trabajar
+con multiples ventanas, por el momento no :P. ademas para llegar a ese punto abria que crear
+mas elementos ya que por el momento la cantidad de elementos con la que cuenta es muy simple.
+
+----------------------------------------------------------------------------------------------
+Version 0.1.0
+    A partir de esta version, pierde casi toda la compatibilidad especialmente el modulo
+frame, ya que se cambio el modelo de desarrollo de esta libreria.
+    Se elimino el objecto BotonImagen, ya que no se preve su uso para proximas versiones,
+fue creado el nuevo modelo de ventana 'xFrame' el cual le agregra un borde a las ventanas.
+
+
+----------------------------------------------------------------------------------------------
+
+Version 0.0.8
+    Se corrigieron algunos errores criticos, se agrego el modelo de ventana que permite
+agrupar los distintos elementos ademas de brindar un manejo mas eficiente de los mismos.
+
+----------------------------------------------------------------------------------------------
+
+Version 0.0.6
+    Esta es la primera version de la libreria,de Momento solo tengo 4 tipos de objectos
+labels, botones, links, editable_text en si no planea ser un avansado de guiu sino una simple
+herramienta para armar algunas cosa  necesarias en mayoria de juegos especificamente para lograr
+realizar un armado de menus mas rapido...
+    La clase botonImagen esta bajo prueva y em pleno desarrollo, por lo que no se
+recomienda su uso ademas de estar incompleta...
+
+----------------------------------------------------------------------------------------------

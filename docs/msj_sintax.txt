@@ -1,0 +1,21 @@
+NONE_ACTION = 0
+TANK_MOVER_ARR = 1
+TANK_MOVER_ABA = 2
+TANK_GIRAR_DER = 3
+TANK_GIRAR_IZQ = 4
+TORRE_GIRAR_DER = 5
+TORRE_GIRAR_IZQ = 6
+TORRE_DISPARAR = 7
+
+
+BASE_DIC = {
+    'T_CX': 100,
+    'T_CY': 100,
+    'T_LIF': 10,
+    'T_ANG': 0,
+    'C_ANG': 0,
+    'S_STS': False,
+    'S_CX': 500,
+    'S_CY': 124,
+    'S_ANG': 0,
+}

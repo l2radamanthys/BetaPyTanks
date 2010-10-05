@@ -1,0 +1,65 @@
+
+Esta ves para evitar problemas utilizare circulos para representar los tankes en
+el control de coliciones para asi evitar problemas subsecuentes, aca abajo
+esta como se realiza el control de coliciones utilizando ciruculos
+
+colicion de circulos
+--------------------
+
+#definicion de circulo
+Circulo:
+    centro = cx,cy  #centro
+    radio           #radio del circulo
+
+sean:
+    c1 = Circulo
+    c2 = Circulo
+
+    #c1 y c2 colicionaron si
+
+    dist = distancia(c1.centro, c2.centro)
+    r2 = c1.radio + c2.radio
+
+    if dist <= r2:
+        #si la distancia es menor que la suma de los radios de ambos circulos
+        #esntonces estos colicionaron
+        return true
+    else:
+        #caso contrario los circulos no colicionaron
+        return false
+
+
+
+Procesamiento de Aciones
+------------------------
+el jugador por turno puede realizar o no un determinado numero de aciones validas proporcionadas por los diferentes metodos, las llamadas sucesivas solo sobreescribiran
+la ultima acion por ejemplo dado el siguiente caso de llamadas:
+
+01 mover(ISO_ADELANTE)
+02 mover(ISO_ADELANTE)
+03 mover(ISO_ATRAS)
+
+solo la 3er acion sera tomada en cuenta, en total son 4 las aciones que se evaluan, aca las
+coloco de acuerdo al orden en que son evaluadas
+
+1- girar_base_del_tanke
+2- girar_cañon_del_tanke
+3- mover_el_tanke
+4- disparar
+
+las aciones se ejecutaran en ese orden sin importar el orden en que hayan sido invocadas
+durante la implementacion de la IA, tener esto en cuenta para evitar confuciones durante la
+implementacion de la IA.
+
+
+Radar?
+------
+En mis comentarios puse que queria realizar algo similar a RobotCode y si alguien conoce
+dicho juego sabra que todos los tankes poseen un radar con el cual escanean el ecenario en
+busca de los oponentes, bueno ahora bien, para evitar problemas y complicaciones al escribir
+la AI decidi que los tankes no tendran dicho elemento, por lo que podran saber en
+todo momento la posicion y direcion del tanke oponente.
+poseeran dicho elementos
+
+
+
