@@ -25,6 +25,7 @@ MARG_INF = ALTO - 40
 #----------------------- Constantes del Juego --------------------------------
 LIFE_INI = 5    #define el valor incial de vida de los bots, por defecto es 3
 SPEED = 5       #velocidad de movimiento de los tankes
+THETA = 3       #angulo de giro
 SHOT_SPEED = 10 #velocidad del disparo
 TANK_RADIO = 30 #para el control de coliciontes
 SHOT_RADIO = 3
@@ -36,6 +37,21 @@ ISO_DER = 2         #derecha
 ISO_ADELANTE = 3    #adelante
 ISO_ATRAS = 4       #atras
 
+
+#---------------------- tipos de eventos -------------------------------------
+NONE_E = 0
+MOVER_E = 1
+GIRAR_E = 3
+GIRAR_BASE_E = 4
+GIRAR_CANON_E = 5
+ATACAR_E = 6
+
+NONE_ACTION = 0
+MOVER_ATRAS = 1
+MOVER_ADELANTE = 2
+GIRAR_IZQ = 3
+GIRAR_DER = 4
+ATACAR = 5
 
 #----------------------- Identificadores varios-------------------------------
 ROJO = 0
@@ -72,5 +88,3 @@ AZUL_NAME = 'AZUL_NAME'
 #estado de la conecion del servidor
 SERVER_STATUS = 'SERVER_STATUS'
 SERVER_MENSAJE = 'SERVER_MENSAJE'
-
-

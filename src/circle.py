@@ -35,7 +35,7 @@ class Circle:
         """
         #el valor de la posicion de un objecto Vector2D es una tupla
         #con valores en coma flotantes
-        fx,fy = self.centro.pos
+        fx, fy = self.centro.pos
         x = int(round(fx))
         y = int(round(fy))
         return x,y
