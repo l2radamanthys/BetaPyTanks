@@ -55,7 +55,7 @@ class Bot(object):
         #creando la conecion
         self.__socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.__socket.connect((host, port))
-        print " -OK-"
+        print "[OK]"
 
         #definiendo color
         data = self.__socket.recv(BUFF_SIZE)

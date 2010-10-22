@@ -47,6 +47,7 @@ import time
 from random import randint
 from sys import exit
 import json
+from thread import start_new_thread
 
 from constantes import *
 from enginer import GameEnginer
@@ -71,10 +72,13 @@ class Server:
         self.abierto = True  #avisa si el servidor sigue aceptando coneciones
         self.loop = True  #correr el servidor
 
+        print "Esperando coneciones de los Bots "
+
         #Espera a que los bots se conecten
         self.bots_socket.bind((host, bot_port))
-        self.bots_socket.listen(1)
+        self.bots_socket.listen(2)
         self.__conectar_bots()
+        print "ok"
 
         #Activa la conecion de los clientes
         self.clients_socket.bind((host, client_port))
@@ -120,7 +124,7 @@ class Server:
         #acepta coneciones mientras el servidor este abierto
         id = 0
         while self.abierto:
-            self.clientes[id], addr = self.clients_socket.accept()
+            self.__clientes[id], addr = self.clients_socket.accept()
             print "Nueva Conecion -> " + str(addr)
             id += 1
         self.clients_socket.close()
@@ -142,7 +146,7 @@ class Server:
 
         self.abierto = False
         #envio de la informacion a los clientes
-        for id, cliente in self.clientes.iteritems():
+        for id, cliente in self.__clientes.iteritems():
             try:
                 #intenta enviar la informacion al cliente
                 cliente.send(data)
@@ -153,7 +157,7 @@ class Server:
         #eliminamos todas las coneciones que dieron error
         for id in borrar:
             print "se perdio la conecion con.."
-            del(self.clientes[id])
+            del(self.__clientes[id])
         print 'send ->'
         self.abierto = True
 
@@ -196,7 +200,7 @@ class Server:
         """
         print "Servidor corriendo...."
         raw_input('Precione Enter para iniciar Juego...')
-        print "Clientes conectados: %d \n" %len(self.clientes)
+        print "Clientes conectados: %d \n" %len(self.__clientes)
         while self.loop:
             self.enviar_datos()
             time.sleep(UPDATE_SPEED)

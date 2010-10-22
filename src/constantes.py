@@ -88,3 +88,31 @@ AZUL_NAME = 'AZUL_NAME'
 #estado de la conecion del servidor
 SERVER_STATUS = 'SERVER_STATUS'
 SERVER_MENSAJE = 'SERVER_MENSAJE'
+
+#datos por defecto
+DEF_DATA = {
+    ROJO_X : 100,
+    ROJO_Y : 200,
+    ROJO_BASE_ANG : 0,
+    ROJO_CANON_ANG : 0,
+    ROJO_SHOT_X : 0,
+    ROJO_SHOT_Y : 0,
+    ROJO_SHOT_ANGLE : 0,
+    ROJO_SHOT_STATUS : False,
+    ROJO_LIFE : 5,
+    ROJO_NAME : 'Rojo',
+
+    AZUL_X : 300,
+    AZUL_Y : 300,
+    AZUL_BASE_ANG : 0,
+    AZUL_CANON_ANG : 0,
+    AZUL_SHOT_X : 0,
+    AZUL_SHOT_Y : 0,
+    AZUL_SHOT_ANGLE : 0,
+    AZUL_SHOT_STATUS : False,
+    AZUL_LIFE : 5,
+    AZUL_NAME : 'Azul',
+
+    SERVER_STATUS : True,
+    SERVER_MENSAJE : 'NADA'
+}

@@ -27,9 +27,13 @@ class EventQueue:
 
 
     def push(self, evt):
-        if not(self._in(evt)):
-            self.__eventos.append(evt)
-            return evt
+        """
+        """
+        if self._in(evt):
+            pos = self.pos(evt)
+            self.pop(pos)
+        self.__eventos.append(evt)
+        return evt
 
 
     def pop(self, id=0):
